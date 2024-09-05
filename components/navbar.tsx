@@ -26,7 +26,7 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <p className="font-bold text-inherit text-4xl text-veryDarkViolet dark:text-violet-600">
+            <p className="font-bold text-inherit text-4xl text-veryDarkBlue dark:text-violet-600">
               Shortly
             </p>
           </NextLink>
@@ -36,7 +36,7 @@ export const Navbar = () => {
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
-                  "data-[active=true]:text-primary data-[active=true]:font-medium text-gray hover:text-veryDarkViolet dark:hover:text-violet-600"
+                  "data-[active=true]:text-primary text-gray hover:text-veryDarkViolet dark:hover:text-violet-600 font-bold"
                 )}
                 color="foreground"
                 href={item.href}
