@@ -1,5 +1,3 @@
-import { Input } from "@nextui-org/input";
-
 import DefaultLayout from "@/layouts/default";
 import Started from "@/components/started";
 import Statistics from "@/components/statistics";

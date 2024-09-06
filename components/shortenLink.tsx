@@ -1,9 +1,10 @@
+import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
 
 export default function ShortenLink() {
   return (
     <div
-      className="w-full bg-shorten-desktop p-10 bg-darkViolet rounded-xl py-16"
+      className="w-full bg-shorten-desktop p-10 bg-darkViolet rounded-xl py-10 flex gap-5 px-16"
       style={{
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -11,10 +12,17 @@ export default function ShortenLink() {
       }}
     >
       <Input
+        classNames={{
+          input: "px-5",
+          inputWrapper: "py-8",
+        }}
         labelPlacement="outside"
         placeholder="Shorten a link here..."
         type="url"
       />
+      <Button className="bg-cyan text-white py-8 px-14 text-xl">
+        Shorten It!
+      </Button>
     </div>
   );
 }
