@@ -1,8 +1,13 @@
+import { FaFacebookSquare } from "react-icons/fa";
+import { IoLogoTwitter } from "react-icons/io";
+import { FaPinterest } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
 import { Link } from "@nextui-org/link";
 
 import { Head } from "./head";
 
 import { Navbar } from "@/components/navbar";
+import ContentFooter from "@/components/contentFooter";
 
 export default function DefaultLayout({
   children,
@@ -16,12 +21,13 @@ export default function DefaultLayout({
       <main className="container mx-auto max-w-6xl px-6 flex-grow pt-10">
         {children}
       </main>
-      <footer className="w-full flex items-center justify-center py-3">
+      <footer className="w-full flex-col flex py-3 bg-veryDarkViolet h-64">
+        <ContentFooter />
         <Link
           isExternal
-          className="flex items-center gap-1 text-current"
-          href="https://nextui-docs-v2.vercel.app?utm_source=next-pages-template"
-          title="nextui.org homepage"
+          className="flex justify-center w-full self-end gap-1 text-current"
+          href="https://github.com/DavidSntdev"
+          title="Github of Developer"
         >
           <span className="text-default-600">Coded by</span>
           <p className="text-primary">David Santos</p>

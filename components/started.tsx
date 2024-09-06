@@ -17,7 +17,7 @@ export default function Started() {
           </p>
         </div>
         <div>
-          <Button className="rounded-full bg-cyan px-5 font-bold">
+          <Button className="rounded-full bg-cyan px-5 font-bold w-36 h-12">
             Get Started
           </Button>
         </div>
