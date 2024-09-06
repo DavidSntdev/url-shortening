@@ -10,7 +10,14 @@ export default function IndexPage() {
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
         <Started />
-        <div>
+        <div
+          className="w-full bg-shorten-desktop p-10 bg-darkViolet rounded-xl py-16"
+          style={{
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
           <Input
             labelPlacement="outside"
             placeholder="Shorten a link here..."

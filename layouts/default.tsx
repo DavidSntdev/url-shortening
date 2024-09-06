@@ -1,14 +1,8 @@
-import { FaFacebookSquare } from "react-icons/fa";
-import { IoLogoTwitter } from "react-icons/io";
-import { FaPinterest } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa";
-import { Link } from "@nextui-org/link";
-
 import { Head } from "./head";
 
 import { Navbar } from "@/components/navbar";
-import ContentFooter from "@/components/contentFooter";
 import Footer from "@/components/footer";
+import Boost from "@/components/Boost";
 
 export default function DefaultLayout({
   children,
@@ -22,6 +16,7 @@ export default function DefaultLayout({
       <main className="container mx-auto max-w-6xl px-6 flex-grow pt-10">
         {children}
       </main>
+      <Boost />
       <Footer />
     </div>
   );
