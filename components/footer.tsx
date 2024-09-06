@@ -4,7 +4,7 @@ import ContentFooter from "./contentFooter";
 
 export default function Footer() {
   return (
-    <footer className="w-full flex-col flex py-3 bg-veryDarkViolet h-64">
+    <footer className="w-full flex-col flex py-3 bg-veryDarkViolet h-full">
       <ContentFooter />
       <Link
         className="flex justify-center w-full self-end gap-1 text-current"

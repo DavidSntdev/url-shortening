@@ -17,7 +17,7 @@ export default function DefaultLayout({
         {children}
       </main>
       <Boost />
-      <Footer />
+      <Footer /> 
     </div>
   );
 }

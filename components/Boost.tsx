@@ -10,8 +10,12 @@ export default function Boost() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <h1 className="text-4xl font-bold text-white">Boost your links today</h1>
-      <Button className="px-10 font-bold rounded-full py-6 text-white bg-cyan">Get Started</Button>
+      <h1 className="lg:text-4xl text-xl font-bold text-white">
+        Boost your links today
+      </h1>
+      <Button className="px-10 font-bold rounded-full py-6 text-white bg-cyan">
+        Get Started
+      </Button>
     </div>
   );
 }

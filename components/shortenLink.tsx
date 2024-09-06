@@ -4,7 +4,7 @@ import { Input } from "@nextui-org/input";
 export default function ShortenLink() {
   return (
     <div
-      className="w-full bg-shorten-desktop p-10 bg-darkViolet rounded-xl py-10 flex gap-5 px-16"
+      className="w-full lg:flex-row flex-col bg-shorten-desktop p-5 bg-darkViolet rounded-xl lg:py-10 flex gap-5 lg:px-16"
       style={{
         backgroundSize: "cover",
         backgroundPosition: "center",
