@@ -8,6 +8,7 @@ import { Head } from "./head";
 
 import { Navbar } from "@/components/navbar";
 import ContentFooter from "@/components/contentFooter";
+import Footer from "@/components/footer";
 
 export default function DefaultLayout({
   children,
@@ -21,18 +22,7 @@ export default function DefaultLayout({
       <main className="container mx-auto max-w-6xl px-6 flex-grow pt-10">
         {children}
       </main>
-      <footer className="w-full flex-col flex py-3 bg-veryDarkViolet h-64">
-        <ContentFooter />
-        <Link
-          isExternal
-          className="flex justify-center w-full self-end gap-1 text-current"
-          href="https://github.com/DavidSntdev"
-          title="Github of Developer"
-        >
-          <span className="text-default-600">Coded by</span>
-          <p className="text-primary">David Santos</p>
-        </Link>
-      </footer>
+      <Footer />
     </div>
   );
 }
