@@ -8,7 +8,7 @@ import Advanced from "@/components/advanced";
 export default function IndexPage() {
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+      <section className="flex flex-col items-center justify-center py-8 md:py-10 gap-20">
         <Started />
         <div
           className="w-full bg-shorten-desktop p-10 bg-darkViolet rounded-xl py-16"
@@ -21,16 +21,13 @@ export default function IndexPage() {
           <Input
             labelPlacement="outside"
             placeholder="Shorten a link here..."
-            startContent={
-              <div className="pointer-events-none flex items-center">
-                <span className="text-default-400 text-small">https://</span>
-              </div>
-            }
             type="url"
           />
         </div>
-        <Advanced />
-        <Statistics />
+        <div className="flex flex-col gap-5">
+          <Advanced />
+          <Statistics />
+        </div>
       </section>
     </DefaultLayout>
   );
