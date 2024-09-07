@@ -1,6 +1,6 @@
 import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 import ShowLink from "./showLink";
@@ -11,28 +11,38 @@ export default function ShortenLink() {
     { url: string; shortenedUrl: string }[]
   >([]);
 
+  useEffect(() => {
+    const savedUrls = localStorage.getItem("shortenedUrls");
+
+    if (savedUrls) {
+      setShortenedUrls(JSON.parse(savedUrls));
+    }
+  }, []);
+
   const handleShorten = async () => {
     if (url) {
       try {
         const response = await axios.post(
-          "https://api.rebrandly.com/v1/links",
+          "https://api-ssl.bitly.com/v4/shorten",
           {
-            destination: url,
-            domain: { fullName: "rebrand.ly" },
+            long_url: url,
           },
           {
             headers: {
               "Content-Type": "application/json",
-              apikey: "d54ce2dfa8bb47249d168610ded4ccb5",
+              Authorization: `Bearer d64fdf96f2e945f21315eddc1e4d84b32f8af025`,
             },
           }
         );
 
-        setShortenedUrls([
+        const newShortenedUrls = [
           ...shortenedUrls,
-          { url, shortenedUrl: response.data.shortUrl },
-        ]);
-        setUrl(""); // Clear the input after shortening
+          { url, shortenedUrl: response.data.link },
+        ];
+
+        setShortenedUrls(newShortenedUrls);
+        localStorage.setItem("shortenedUrls", JSON.stringify(newShortenedUrls));
+        setUrl("");
       } catch (error) {
         console.error("Erro ao encurtar o link:", error);
       }

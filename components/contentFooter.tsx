@@ -11,22 +11,24 @@ export default function ContentFooter() {
       </div>
       <div className="flex lg:col-span-2 flex-col gap-3 items-center lg:items-start">
         <h1 className="text-white text-sm font-bold mb-2">Features</h1>
-        <p className="text-xs">Link Shortening</p>
-        <p className="text-xs">Branded Links</p>
-        <p className="text-xs">Analytics</p>
+        <p className="text-xs hover:text-cyan cursor-pointer">
+          Link Shortening
+        </p>
+        <p className="text-xs hover:text-cyan cursor-pointer">Branded Links</p>
+        <p className="text-xs hover:text-cyan cursor-pointer">Analytics</p>
       </div>
       <div className="flex lg:col-span-2 flex-col gap-3 items-center lg:items-start">
         <h1 className="text-white text-sm font-bold mb-2">Resources</h1>
-        <p className="text-xs">Blog</p>
-        <p className="text-xs">Developers</p>
-        <p className="text-xs">Support</p>
+        <p className="text-xs hover:text-cyan cursor-pointer">Blog</p>
+        <p className="text-xs hover:text-cyan cursor-pointer">Developers</p>
+        <p className="text-xs hover:text-cyan cursor-pointer">Support</p>
       </div>
       <div className="flex lg:col-span-2 flex-col gap-3 items-center lg:items-start">
         <h1 className="text-white text-sm font-bold mb-2">Company</h1>
-        <p className="text-xs">About</p>
-        <p className="text-xs">Our Team</p>
-        <p className="text-xs">Careers</p>
-        <p className="text-xs">Contact</p>
+        <p className="text-xs hover:text-cyan cursor-pointer">About</p>
+        <p className="text-xs hover:text-cyan cursor-pointer">Our Team</p>
+        <p className="text-xs hover:text-cyan cursor-pointer">Careers</p>
+        <p className="text-xs hover:text-cyan cursor-pointer">Contact</p>
       </div>
       <div className="flex lg:col-span-2 gap-6">
         <FaFacebookSquare size={30} />
